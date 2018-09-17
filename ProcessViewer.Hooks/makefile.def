@@ -1,0 +1,5 @@
+LIBRARY	"ProcessViewer.Hooks"
+EXPORTS
+	StartHook				@1
+	EndHook					@2
+	MessageHookProcedure	@3

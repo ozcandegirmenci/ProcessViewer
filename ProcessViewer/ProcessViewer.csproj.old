@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72EC8761-5918-4A2A-BA96-0DD8505F8D79}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProcessViewer</RootNamespace>
+    <AssemblyName>Process Viewer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Properties\App.ico</ApplicationIcon>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\snProcessViewer.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRules>-Microsoft.Design#CA1054;-Microsoft.Globalization#CA1300;-Microsoft.Mobility#CA1601;-Microsoft.Naming#CA1704;-Microsoft.Performance#CA1805</CodeAnalysisRules>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Design\FlagsEditor.cs" />
+    <Compile Include="Design\FlagsEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\MultilineTextEditor.cs" />
+    <Compile Include="Design\MultilineTextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\MultilineTextEditorControl.Designer.cs">
+      <DependentUpon>MultilineTextEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditMessage.Designer.cs">
+      <DependentUpon>FormEditMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeclareMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeclareMessage.Designer.cs">
+      <DependentUpon>FormDeclareMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBreakpoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBreakpoints.Designer.cs">
+      <DependentUpon>FormBreakpoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptions.Designer.cs">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectedTooltip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectedTooltip.Designer.cs">
+      <DependentUpon>FormSelectedTooltip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="ResourceSuppressions.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Design\FlagsEditorControl.resx">
+      <DependentUpon>FlagsEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\MultilineTextEditorControl.resx">
+      <DependentUpon>MultilineTextEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditMessage.resx">
+      <DependentUpon>FormEditMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeclareMessage.resx">
+      <DependentUpon>FormDeclareMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBreakpoints.resx">
+      <DependentUpon>FormBreakpoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOptions.resx">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectedTooltip.resx">
+      <DependentUpon>FormSelectedTooltip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SRCategoryAttribute.cs" />
+    <Compile Include="SRDescriptionAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\App.ico" />
+    <None Include="Resources\window.png" />
+    <None Include="Resources\windows.png" />
+    <None Include="Resources\software_16x16.png" />
+    <None Include="Resources\FndWnd.cur" />
+    <None Include="Resources\play-options.ico" />
+    <None Include="Resources\import_16.png" />
+    <None Include="Resources\save_16.png" />
+    <None Include="Resources\navigate_16x16.png" />
+    <None Include="Resources\documents_16.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\favorites-add_16.png" />
+    <None Include="Resources\info_16.png" />
+    <None Include="Resources\PropertyGrid.png" />
+    <None Include="Resources\horizontal2_16x16.png" />
+    <None Include="Resources\horizontal_16x16.png" />
+    <None Include="Resources\tab_16x16.png" />
+    <None Include="Resources\open-in-browser_16x16.png" />
+    <None Include="Resources\copy_16.png" />
+    <None Include="Resources\cancel_161.png" />
+    <None Include="Resources\calendar_16.png" />
+    <None Include="Resources\zoom-in_16.png" />
+    <None Include="Resources\stop_16.png" />
+    <None Include="Resources\go_16.png" />
+    <None Include="Resources\help_16.png" />
+    <None Include="Resources\delete_16.png" />
+    <None Include="Resources\applications_16.png" />
+    <None Include="app.config" />
+    <None Include="Resources\pictures_16.png" />
+    <None Include="Resources\confirm_16.png" />
+    <None Include="Resources\cancel_16.png" />
+    <None Include="Resources\web_16.png" />
+    <None Include="Resources\refresh_16.png" />
+    <None Include="Properties\snProcessViewer.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
