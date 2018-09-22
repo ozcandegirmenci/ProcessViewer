@@ -160,6 +160,9 @@
     <EmbeddedResource Include="FormOptions.resx">
       <DependentUpon>FormOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOptions.tr-TR.resx">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSelectedTooltip.resx">
       <DependentUpon>FormSelectedTooltip.cs</DependentUpon>
     </EmbeddedResource>
