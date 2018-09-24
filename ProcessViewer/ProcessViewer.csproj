@@ -145,6 +145,9 @@
     <EmbeddedResource Include="FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.tr-TR.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditMessage.resx">
       <DependentUpon>FormEditMessage.cs</DependentUpon>
     </EmbeddedResource>
